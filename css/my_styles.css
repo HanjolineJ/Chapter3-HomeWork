@@ -1,0 +1,116 @@
+/* Created by Hanjoline Julceus on 2/3/2025 */
+/* Set the height of the body and html to 100% */
+html, body {
+    height: 100%;
+}
+
+/* Display HTML5 structural elements as blocks */
+footer, header, section, nav {
+    display: block;
+}
+
+/* Style for the nav element */
+nav {
+    width: 200px;
+    float: left;
+    color: blue;
+    margin-right: 10px;
+    margin-top: -35px;
+    padding:0px;
+}
+nav ul {
+    background-color: #958181;
+    line-height: 2em;
+    list-style-type: none;
+    padding: 0px;
+    text-indent: 5px;
+    border-radius: 5px;
+    margin:0px;
+
+}
+
+nav ul li:hover {
+    background-color: rgb(148, 51, 62); 
+    border-radius: 5px;
+}
+
+nav ul li a {
+    color: rgb(255,255,0);
+    font-weight: bold;
+    text-decoration: none;
+    padding:0px;
+}
+
+section img#home_page_img{
+    width: 560px;
+    height: 400px
+}
+
+.img_border{
+    padding: 5px;
+    margin: 5px;
+    border-style: solid;
+    border-color: rgb(175,175,175) rgb(200,200,200);
+    background-color: black;
+    border-radius: 20px;
+}
+
+section h2 {
+    font-family: Copperplate, "Copperplate Gothic", serif;
+    max-width: 870px;
+}
+
+section figcaption{
+    text-align: center;
+    max-width: 870px;
+    font-family: Monico, Consolas;
+}
+
+header h1{
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 5px rgb(30, 144, 255);
+    font-family: Garamond, Copperplate;
+    margin: -10px -10px 20px -10px;
+    font-size: 2em;
+    padding: 10px;
+    font-family: 20px;
+    background-image: linear-gradient(rgb(255,255,255), rgb(30,144,255));
+    color: black;
+}
+
+footer{
+    text-align: center;
+    font-size: .75em;
+    font-family: Garamond;
+    background-color: rgb(200,200,200);
+    margin: 0px -10px 20px -10px;
+}
+h2 {
+    text-align: center;
+
+}
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    border: 3px solid black; /* Thicker border around the table */
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: lightgray;
+}
+
+tr:nth-child(odd) {
+    background-color: white; /* White for odd rows */
+}
+
+tr:nth-child(even) {
+    background-color: #add8e6; /* Light blue for even rows */
+}

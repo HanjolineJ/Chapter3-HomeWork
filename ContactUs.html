@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="css/my_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="ManageDoctors.html">Manage Doctors</a></li>
+            <li><a href="AddDoctor.html">Add Doctors</a></li>
+            <li><a href="ManagePatients.html">Manage Patients</a></li>
+            <li><a href="AddPatients.html">Add Patients</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Contact Us</h2>
+        <form action="submit_contact.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        Hanjoline Julceus <br> &copy; 2025
+    </footer>
+</body>
+</html>
