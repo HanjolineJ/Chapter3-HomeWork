@@ -7,7 +7,7 @@
 	<body>
 		<header>
 			<h1>
-				Healthcare – Treatment Service Management
+				Add Treatment
 			</h1>
 		</header>
 		<nav>
@@ -16,25 +16,31 @@
                     <a href="index.html">Home</a>
                 </li>
                 <li> 
-                    <a href="AddService.html">Add Service</a>
+                    <a href="ManageTreatment.html">Manage Treatment</a>
                 </li>
                 <li>
                     <a href="AddTreatment.html">Add Treatment</a>
                 </li>
-                <li>
-                    <a href="ManageService.html">Manage Service</a>
-                </li>
-                <li>
-                    <a href="ManageTreatment.html">Manage Treatment</a>
-                </li>
-                <li>
-                    <a href="ContactUs.html">Contact Us</a>
-                </li>
             </ul>
 		<section>
-            <h2>
-                Add Treatment
-            </h2>
+            <form action="submitTreatment.php" method="post">
+                <label for="treatmentId">Treatment ID:</label>
+                <input type="text" id="treatmentId" name="treatmentId" required>
+                
+                <label for="treatmentName">Treatment Name:</label>
+                <input type="text" id="treatmentName" name="treatmentName" required>
+                
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+                
+                <label for="costRegular">Cost (Regular Body Type):</label>
+                <input type="number" id="costRegular" name="costRegular" required>
+                
+                <label for="costAbnormal">Cost (Abnormal Body Type):</label>
+                <input type="number" id="costAbnormal" name="costAbnormal" required>
+                
+                <button type="submit">Submit</button>
+            </form>
 		</section>
 		<footer>
 			Hanjoline Julceus <br/> &copy; 2025

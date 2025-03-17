@@ -7,22 +7,37 @@
 	<body>
 		<header>
 			<h1>
-				Healthcare – Treatment Service Management
+				Add Service
 			</h1>
 		</header>
 		<nav>
             <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="ManageDoctors.html">Manage Doctors</a></li>
-            <li><a href="AddDoctor.html">Add Doctor</a></li>
-            <li><a href="ManagePatients.html">Manage Patients</a></li>
-            <li><a href="AddPatient.html">Add Patient</a></li>
-            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="ManageService.html">Manage Services</a></li>
+            <li><a href="AddService.html">Add Service</a></li>
             </ul>
 		<section>
-            <h2>
-                Add Service
-            </h2>
+			<form action="submitService.php" method="post">
+				<label for="serviceId">Service ID:</label>
+				<input type="text" id="serviceId" name="serviceId" required>
+				
+				<label for="serviceName">Service Name:</label>
+				<input type="text" id="serviceName" name="serviceName" required>
+				
+				<label for="category">Category:</label>
+				<input type="text" id="category" name="category" required>
+				
+				<label for="servicePrice">Service Price:</label>
+				<input type="number" id="servicePrice" name="servicePrice" required>
+				
+				<label for="serviceType">Service Type:</label>
+				<input type="text" id="serviceType" name="serviceType" required>
+				
+				<label for="description">Description:</label>
+				<textarea id="description" name="description" rows="4" required></textarea>
+				
+				<button type="submit">Submit</button>
+			</form>
 		</section>
 		<footer>
 			Hanjoline Julceus <br/> &copy; 2025
