@@ -12,6 +12,8 @@
 
 				$dh = new DataHandler();
 				$results = $dh->sp_get_service_by_id('1'); // using your new function
+				//$results = $dh->sp_get_all_services();
+				//echo $dh->add_service("MRI Scan", "Radiology", "800", "Diagnostic", "Magnetic resonance imaging");
 				
 				echo "<table class='fullborder'>
 				<tr>

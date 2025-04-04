@@ -71,5 +71,53 @@
 			return $results;
 		}
 		
+		public function sp_get_services_by_category($category) {
+			$query = "CALL sp_get_services_by_category('".$category."')";
+			$exec_query = mysqli_query($this->db_conn, $query);
+		
+			$results = array();
+			while ($row = mysqli_fetch_assoc($exec_query)) {
+				$results[] = $row;
+			}
+			return $results;
+		}
+		
+		public function sp_get_treatments_by_name($name) {
+			$query = "CALL sp_get_treatments_by_name('".$name."')";
+			$exec_query = mysqli_query($this->db_conn, $query);
+		
+			$results = array();
+			while ($row = mysqli_fetch_assoc($exec_query)) {
+				$results[] = $row;
+			}
+			return $results;
+		}
+
+		public function add_service($service_name, $category, $service_price, $service_type, $description) {
+			$query = "CALL sp_insert_service(
+				'".$service_name."', 
+				'".$category."', 
+				'".$service_price."', 
+				'".$service_type."', 
+				'".$description."')";
+		
+			$exec_query = mysqli_query($this->db_conn, $query);
+		
+			return $exec_query ? "Service added successfully" : "Error adding service";
+		}
+		
+		public function add_treatment($treatment_id, $treatment_name, $category, $cost_regular, $cost_abnormal) {
+			$query = "CALL sp_insert_treatment(
+				'".$treatment_id."', 
+				'".$treatment_name."', 
+				'".$category."', 
+				'".$cost_regular."', 
+				'".$cost_abnormal."')";
+		
+			$exec_query = mysqli_query($this->db_conn, $query);
+		
+			return $exec_query ? "Treatment added successfully" : "Error adding treatment";
+		}
+		
 	}
 ?>
