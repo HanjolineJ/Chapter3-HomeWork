@@ -114,3 +114,25 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
     background-color: #add8e6; /* Light blue for even rows */
 }
+
+.fullborder {
+	border: 2px solid black; 
+	border-collapse: collapse;
+	width:80%;
+}
+
+.fullborder th, td {
+	border: 1px solid rgb(175,175,175); 
+}
+
+#searchBox {
+	border: 2px solid black;
+	border-radius: 5px;
+	width:25%;
+	padding: 5px;
+}
+
+#searchBox input[type=submit] {
+	margin-top: 5px;
+	margin-left: 80%;
+}
