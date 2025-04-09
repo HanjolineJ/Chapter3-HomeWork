@@ -37,8 +37,8 @@
                         <th>Treatment ID</th>
                         <th>Treatment Name</th>
                         <th>Category</th>
-                        <th>Insurance Cost</th>
-                        <th>Out-of-Pocket Cost</th>
+                        <th>Cost_Regular_Body_Type</th>
+                        <th>Cost_Abnormal_Body_Type</th>
                     </tr>";
 
             foreach ($results as $row) {
@@ -46,8 +46,8 @@
                         <td>{$row['Treatment_ID']}</td>
                         <td>{$row['Treatment_Name']}</td>
                         <td>{$row['Category']}</td>
-                        <td>{$row['Insurance_Cost']}</td>
-                        <td>{$row['Out_of_Pocket_Cost']}</td>
+                        <td>{$row['Cost_Regular_Body_Type']}</td>
+                        <td>{$row['Cost_Abnormal_Body_Type']}</td>
                       </tr>";
             }
 
