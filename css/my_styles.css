@@ -9,17 +9,17 @@ footer, header, section, nav {
     display: block;
 }
 
-/* Style for the nav element */
+/* Style for the nav element margin-right: 10px;
+    margin-top: -35px; */
 nav {
     width: 200px;
     float: left;
     color: blue;
-    margin-right: 10px;
-    margin-top: -35px;
+    margin: 10px 10px 0 0;
     padding:0px;
 }
 nav ul {
-    background-color: #958181;
+    background-color: rgb(175, 175, 175);
     line-height: 2em;
     list-style-type: none;
     padding: 0px;
@@ -55,18 +55,26 @@ section img#home_page_img{
     border-radius: 20px;
 }
 
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 section h2 {
     font-family: Copperplate, "Copperplate Gothic", serif;
     max-width: 870px;
 }
 
-section figcaption{
+section figcaption {
     text-align: center;
     max-width: 870px;
-    font-family: Monico, Consolas;
+    font-family: Monaco, Consolas, monospace;
+    margin-top: 10px;
+    font-style: italic;
 }
 
-header h1{
+header h1 {
     text-align: center;
     letter-spacing: 5px;
     text-shadow: 2px 2px 5px rgb(30, 144, 255);
@@ -78,14 +86,24 @@ header h1{
     background-image: linear-gradient(rgb(255,255,255), rgb(30,144,255));
     color: black;
 }
-
-footer{
-    text-align: center;
-    font-size: .75em;
-    font-family: Garamond;
-    background-color: rgb(200,200,200);
-    margin: 0px -10px 20px -10px;
+header::after {
+    content: "";
+    display: table;
+    clear: both;
 }
+
+footer {
+    clear: both;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0.75em;
+    font-family: Garamond;
+    background-color: rgb(200, 200, 200);
+    margin: 20px -10px 0 -10px;
+    padding: 10px;
+}
+
 h2 {
     text-align: center;
 
@@ -95,6 +113,7 @@ table {
     border-collapse: collapse;
     margin: 20px auto;
     border: 3px solid black; /* Thicker border around the table */
+    align-items : center;
 }
 
 th, td {
@@ -115,24 +134,70 @@ tr:nth-child(even) {
     background-color: #add8e6; /* Light blue for even rows */
 }
 
-.fullborder {
-	border: 2px solid black; 
-	border-collapse: collapse;
-	width:80%;
+.fullborder{
+    border:2px solid #000;
+    border-collapse:collapse;
+    width:80%;
+    margin:0 auto 20px;     /* centred like the screenshot */
 }
 
-.fullborder th, td {
-	border: 1px solid rgb(175,175,175); 
+.fullborder th,
+.fullborder td{
+    border:1px solid gray;
+    padding:4px;
+}
+
+.fullborder th{
+    background:#d3d3d3;      /* light‑gray header */
 }
 
 #searchBox {
-	border: 2px solid black;
-	border-radius: 5px;
-	width:25%;
-	padding: 5px;
+
+    border: 2px solid black;
+
+    border-radius: 5px;
+
+    width: 25%;
+
+    padding: 5px;
+
+    display: inline-block;
+
 }
 
 #searchBox input[type=submit] {
 	margin-top: 5px;
 	margin-left: 80%;
+}
+
+section table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+section form input[type="submit"]{
+    display: block;
+    margin: 10px auto;   /* auto left & right centres the button */
+}
+
+section form button[type="submit"]{
+    display:block;
+    margin:10px auto;
+}
+
+.formbox{
+    border:2px solid #000;      
+    border-radius:6px;          
+    padding:10px 15px;          
+    width:350px;                
+    margin:0 auto 20px;         
+    background:#fff;           
+}
+
+                        */
+.formbox input[type="submit"],
+.formbox button[type="submit"]{
+    display:block;
+    margin:12px auto;
 }

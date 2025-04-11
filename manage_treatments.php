@@ -2,21 +2,29 @@
 <html>
 <head>
     <title>Manage Treatments</title>
-    <link rel="stylesheet" type="text/css" href="css/my_styles.css" media="screen, print" />
+    <link rel="stylesheet" type="text/css" href="css/my_styles.css" media="screen, print"/>
 </head>
 <body>
-    <h1>Manage Treatments</h1>
+    <header>
+        <h1>Manage Treatments</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AddTreatment.html">Add Treatment</a></li>
+            <li><a href="AddService.html">Add Service</a></li>
+            <li><a href="ManageService.html">Manage Services</a></li>
+            <li><a href="ManageTreatment.html">Manage Treatments</a></li>
+        </ul>
+    </nav>
 
-    <!-- Search Form -->
-    <div>
+    <section>
+        <h2>Manage Treatments</h2>
         <form method="post" action="manage_treatments.php">
-            <label for="treatment_name">Search by Treatment Name:</label>
-            <input type="text" id="treatment_name" name="treatment_name" required/><br/>
-            <input type="submit" value="Search">
+            <label for="treatment_name">Filter by Treatment Name:</label>
+            <input type="text" id="treatment_name" name="treatment_name" />
+            <input type="submit" value="Filter">
         </form>
-    </div>
-
-    <!-- Dynamic Table -->
     <p>
         <?php
         include "data_handler.php";
@@ -56,6 +64,10 @@
             echo "<p>No results found.</p>";
         }
         ?>
+    </section>
+    <footer>
+        Hanjoline Julceus <br/> &copy; 2025
+    </footer>
     </p>
 </body>
 </html>

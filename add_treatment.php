@@ -5,8 +5,18 @@
     <link rel="stylesheet" type="text/css" href="css/my_styles.css" media="screen, print" />
 </head>
 <body>
+    <header>
     <h1>Add a New Treatment</h1>
-
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AddService.html">Add Service</a></li>
+            <li><a href="ManageService.html">Manage Services</a></li>
+            <li><a href="ManageTreatment.html">Manage Treatments</a></li>
+        </ul>
+    </nav>
+    <section>
     <!-- Add Treatment Form -->
     <form method="post" action="add_treatment.php">
         <label>Treatment Name:</label><br>
@@ -44,5 +54,9 @@
         }
         ?>
     </p>
+    <section>
+    <footer>
+        Hanjoline Julceus <br/> &copy; 2025
+    </footer>
 </body>
 </html>

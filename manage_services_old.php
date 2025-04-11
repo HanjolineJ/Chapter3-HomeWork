@@ -1,32 +1,22 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title> Manage Services</title>
-		<link rel="stylesheet" type="text/css" href="css/my_styles.css" media="screen, print">
-	</head>
-	<body>
-		<header>
-            <h1>
-				Manage Services
-			</h1>
-		</header>
-		<nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="AddTreatment.html">Add Treatment</a></li>
-                <li><a href="ManageTreatment.html">Manage Treatment</a></li>
-                <li><a href="ManageService.html">Manage Services</a></li>
-                <li><a href="AddService.html">Add Service</a></li>
-            </ul>
-        </nav>
-		<section>
-            <h2>Manage Services</h2>
+<head>
+    <title>Manage Services</title>
+    <link rel="stylesheet" type="text/css" href="css/my_styles.css" media="screen, print" />
+</head>
+<body>
+    <h1>Manage Services</h1>
+
     <!-- Search Form -->
-        <form method="post" action="manage_services.php" class="formbox">
+    <div>
+        <form method="post" action="manage_services.php">
             <label for="category">Search by Category:</label>
-            <input type="text" id="category" name="category"/><br/>
+            <input type="text" id="category" name="category" required/><br/>
             <input type="submit" value="Search">
         </form>
+    </div>
+
+    <!-- build dynamic table -->
     <p>
         <?php
             include "data_handler.php";
@@ -34,10 +24,12 @@
 
             $results = [];
 
-            if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['category'])) {
                 $category = $_POST['category']; // search term name that matches the label/input
                 $results = $dh->sp_get_services_by_category($category); // data handler method
-            
+            } else {
+                $results = $dh->sp_get_all_services(); // show all by default
+            }
 
             // Build table if results exist
             if (!empty($results)) {
@@ -66,11 +58,7 @@
             } else {
                 echo "<p>No results found.</p>";
             }
-        }
         ?>
-	</section>
-	<footer>
-			Hanjoline Julceus <br/> &copy; 2025
-	</footer>
+    </p>
 </body>
 </html>
