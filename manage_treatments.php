@@ -36,7 +36,7 @@
             $treatment_name = $_POST['treatment_name'];
             $results = $dh->sp_get_treatments_by_name($treatment_name);
         } else {
-            $results = $dh->sp_get_all_treatments();
+            //$results = $dh->sp_get_all_treatments();
         }
 
         if (!empty($results)) {
