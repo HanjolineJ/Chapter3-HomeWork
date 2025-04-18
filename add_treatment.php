@@ -9,12 +9,13 @@
     <h1>Add a New Treatment</h1>
     </header>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="AddService.html">Add Service</a></li>
-            <li><a href="ManageService.html">Manage Services</a></li>
-            <li><a href="ManageTreatment.html">Manage Treatments</a></li>
-        </ul>
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="add_treatment.php">Add Treatment</a></li>
+        <li><a href="manage_treatments.php">Manage Treatment</a></li>
+        <li><a href="manage_services.php">Manage Services</a></li>
+        <li><a href="add_service.php">Add Service</a></li>
+    </ul>
     </nav>
     <section>
     <!-- Add Treatment Form -->
